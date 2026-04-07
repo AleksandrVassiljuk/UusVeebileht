@@ -1,0 +1,85 @@
+/* Üldine keha */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0; padding:20px;
+    transition: all 0.5s ease;
+}
+
+/* Pealkiri */
+h1, h2 {
+    text-align:center;
+    color:#111; /* tumedam tekst */
+    text-shadow: 1px 1px 3px rgba(255,255,255,0.7); /* veidi heledat shadow'd, et tekst eristuks */
+}
+
+/* Pealkirjade suurus */
+h1 { font-size:2.2em; margin-bottom:20px; }
+h2 { font-size:1.5em; margin-bottom:15px; }
+
+/* Top nuppude konteiner */
+.top-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Nupud */
+.top-buttons button {
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.top-buttons button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Sektsioonid */
+section {
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:25px; margin:25px auto; width:380px; border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* Erinevad kastid */
+#todoSection {border-radius:30px; background: linear-gradient(135deg, #ff9a9e, #fad0c4);}
+#calculatorSection {border-radius:25px; background: linear-gradient(135deg, #a1c4fd, #c2e9fb);}
+#gameSection {border-radius:35px; background: linear-gradient(135deg, #fbc2eb, #a6c1ee);}
+#filterSection {border-radius:20px; background: rgba(255,255,255,0.85); backdrop-filter: blur(10px);}
+#formSection {border-radius:25px; background: linear-gradient(135deg, #fef9c3, #fff1c1);}
+
+/* Input ja nupud */
+input, select {
+    width:90%; padding:10px; margin:8px 0; border-radius:12px; border:1px solid #ccc;
+    outline:none; transition:0.3s;
+}
+input:focus, select:focus {border-color:#4CAF50; box-shadow:0 0 8px rgba(76,175,80,0.4);}
+button {
+    padding:10px 20px; border-radius:12px; border:none; cursor:pointer;
+    transition: all 0.3s ease; font-weight:bold; margin-top:5px;
+}
+button:hover {transform: scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,0.2);}
+
+/* Listid ja li hover */
+li {list-style:none; padding:8px 10px; margin:5px 0; border-radius:12px; background: rgba(255,255,255,0.9); transition:0.3s;}
+li:hover {background: rgba(200,200,200,0.7);}
+
+/* Dark mode */
+body.dark-mode {
+    background:#222; color:#eee;
+}
+body.dark-mode section {background:#333; color:#eee;}
+body.dark-mode input, body.dark-mode select {background:#555; color:#eee; border:none;}
+body.dark-mode button {background:#1e90ff; color:white;}
+body.dark-mode h1, body.dark-mode h2 {color:white; text-shadow: 1px 1px 4px rgba(0,0,0,0.7);}

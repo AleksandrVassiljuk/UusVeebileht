@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+<meta charset="UTF-8">
+<title>PRO Mega Interaktiivne Veebileht</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Interaktiivne Veebileht</h1>
+
+<!-- TOP BUTTONS: Dark/Light ja Refresh -->
+<div class="top-buttons">
+  <button id="themeBtn">Lülita Dark/Light</button>
+  <button id="refreshBtn">Värskenda lehte 🔄</button>
+</div>
+
+<!-- TO-DO LIST -->
+<section id="todoSection">
+<h2>To-Do List (Drag & Drop + Prioriteet)</h2>
+<input type="text" id="taskInput" placeholder="Lisa ülesanne">
+<select id="taskPriority">
+<option value="High">High 🔴</option>
+<option value="Medium">Medium 🟡</option>
+<option value="Low">Low 🟢</option>
+</select>
+<button id="addTaskBtn">Lisa</button>
+<ul id="taskList" class="draggable-list"></ul>
+</section>
+
+<!-- KALKULAATOR -->
+<section id="calculatorSection">
+<h2>Kalkulaator + Ajalugu</h2>
+<input type="number" id="num1" placeholder="Number 1">
+<input type="number" id="num2" placeholder="Number 2">
+<select id="operator">
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="*">*</option>
+<option value="/">/</option>
+</select>
+<button id="calcBtn">Arvuta</button>
+<p id="result"></p>
+<ul id="calcHistory"></ul>
+</section>
+
+<!-- ARVAMISMÄNG -->
+<section id="gameSection">
+<h2>Arva Number (1–10)</h2>
+<input type="number" id="guess" placeholder="Sinu pakkumine">
+<button id="guessBtn">Arva</button>
+<p id="guessResult"></p>
+<img id="guessImg" src="" alt="" width="50">
+<p>Skoor: <span id="score">0</span></p>
+</section>
+
+<!-- FILTRIGA NIMEKIRI -->
+<section id="filterSection">
+<h2>Filtreeri Nimekirja</h2>
+<input type="text" id="filterInput" placeholder="Otsi...">
+<ul id="nameList">
+<li>Anna</li>
+<li>Jaan</li>
+<li>Maria</li>
+<li>Karl</li>
+<li>Liisa</li>
+</ul>
+</section>
+
+<!-- REGISTREERIMINE -->
+<section id="formSection">
+<h2>Registreerimine</h2>
+<form id="regForm">
+<input type="text" id="name" placeholder="Nimi">
+<input type="email" id="email" placeholder="Email">
+<button type="submit">Saada</button>
+</form>
+<p id="formMessage"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
